@@ -37,7 +37,6 @@ public class Generic {
         if (list.isEmpty()) {
             return 0;
         } else {
-
             if (list.get(0) instanceof Integer) {
                 for (T t : list) {
                     result = result.intValue() + t.intValue();
@@ -79,7 +78,7 @@ public class Generic {
 //    Napisz generyczną metodę która przyjmuje Listę elementów będących jakimikowiek numerami i zwraca ich sumę,
 //    ale filtruje elementy większe od dodatkowo przekazanego parametru
 
-    public static <T extends Number> OptionalDouble sumList5WithStream(List<T> list){
-        return list.stream().mapToDouble(Number::doubleValue).filter(d->d>5).reduce((d1,d2) -> d1+d2);
+    public static <T extends Number> OptionalDouble sumList5WithStream(List<T> list, Double parameter){
+        return list.stream().mapToDouble(Number::doubleValue).filter(d->d>parameter).reduce((d1,d2) -> d1+d2);
     }
 }

@@ -46,8 +46,8 @@ public class GenericTest {
 
     @Test
     void summingList5WithStream() {
-        System.out.println(Generic.sumList5WithStream(numbers1));
-        System.out.println(Generic.sumList5WithStream(numbers2));
+        System.out.println(Generic.sumList5WithStream(numbers1,5.0));
+        System.out.println(Generic.sumList5WithStream(numbers2,5.0));
     }
 
 }
